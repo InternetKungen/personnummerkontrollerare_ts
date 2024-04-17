@@ -71,7 +71,6 @@ main {
 
 #personnummer-output > p {
     animation: fade-in 0.2s ease-in 1;
-    color: var(--border)
 }
 
 @keyframes fade-in {
@@ -81,4 +80,12 @@ main {
     100% {
         opacity: 1;
     }
+}
+
+.valid {
+    color: var(--fill);
+}
+
+.invalid {
+    color: var(--border);
 }
