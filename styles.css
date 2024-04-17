@@ -1,0 +1,84 @@
+:root {
+    --background: #1A535C;
+    --fill: #4ECDC4;
+    --input: #F7FFF7;
+    --border: #FF6B6B;
+    --active: #FFE66D;
+
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    background: var(--background);
+    font-family: monospace;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    width: fit-content;
+    padding: 20px;
+    background: var(--fill);
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    box-shadow: 0 0 10px var(--border);
+}
+
+.personnummer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personnummer__form > input {
+    height: 30px;
+    border-radius: 8px;
+    background: var(--input);
+    border: 2px solid var(--background);
+    color: var(--background);
+}
+
+.personnummer__form > button {
+    margin-top: 10px;
+    height: 30px;
+    width: 90px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, var(--border), transparent);
+    border: 2px solid var(--background);
+    color: var(--background);
+    transition: background 0.3s ease;
+}
+
+.personnummer__form > button:active {
+    background: var(--active);
+    color: var(--border);
+    transition: none; 
+}
+
+#personnummer-output {
+    position: absolute;
+    top: calc(50vh + 80px);
+}
+
+#personnummer-output > p {
+    animation: fade-in 0.2s ease-in 1;
+    color: var(--border)
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

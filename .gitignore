@@ -1,0 +1,11 @@
+#node_modules
+node_modules/
+
+#parcel-cache
+.parcel-cache/
+
+#package-lock.json
+package-lock.json
+
+#dist
+dist/
