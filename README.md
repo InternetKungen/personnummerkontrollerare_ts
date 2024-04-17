@@ -1,6 +1,6 @@
 # Personnummerkontrollerare
 
-A swedish personal number checker
+A swedish personal number checker - made with TypeScript
 
 ## Install
 
