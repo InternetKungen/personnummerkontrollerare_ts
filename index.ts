@@ -3,9 +3,14 @@ function validatePersonnummer(personnummer: string): boolean {
     personnummer = personnummer.replace(/-/g, '');
 
     // Kontrollera att personnumret är i rätt format (10 siffror)
-    if (!/^\d{10}$/.test(personnummer)) {
-        console.error('Ogiltigt personnummer: Måste vara 10 siffror utan bindestreck.');
+    if (!/^\d{10,12}$/.test(personnummer)) {
+        console.error('Ogiltigt personnummer: Måste vara 10 elle 12 siffror');
         return false;
+    }
+
+    // Om personnumret är längre än 10 siffror, ta bort de två första siffrorna
+    if (personnummer.length > 10) {
+        personnummer = personnummer.slice(2);
     }
 
     // Dela upp personnumret i en array av siffror
